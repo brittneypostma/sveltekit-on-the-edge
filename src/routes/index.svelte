@@ -1,18 +1,17 @@
 <!-- <script context="module">
 	export async function load({ fetch }) {
-		const response = await fetch('/api/local');
-
+		const res = await fetch('/api/event');
+		const event = await res.json();
+    console.log(event)
 		return {
 			props: {
-				response
+				event
 			}
 		};
 	}
 </script> -->
 <script>
-	// export let response;
-	export let ip;
+	export let event;
 </script>
 
-<!-- {JSON.stringify(response)} -->
-{JSON.stringify(ip, null, 2)}
+{JSON.stringify(event, null, 2)}

@@ -2,7 +2,7 @@
 export function get(event) {
 	return {
 		body: {
-			event: event
+			ip: event.platform
 		}
 	};
 }
